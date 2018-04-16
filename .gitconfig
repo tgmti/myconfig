@@ -1,0 +1,42 @@
+[alias]
+	st = status
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%a %d/%m/%Y %H:%M:%S'
+	lgf = log --pretty=format:'==================%n%h - %an - %ai%n%B%nFontes Alterados:' --abbrev-commit --name-only
+	lgr = log --reverse --pretty=format:'==================%n%h - %an - %ai%n%B%nFontes Alterados:' --abbrev-commit --name-only
+	lgos = log --reverse --pretty=format:'==================%n%B%nFontes Alterados:' --abbrev-commit --name-only --author-date-order --author=TGM
+	aa = add .
+	ci = commit -m
+	ca = commit -a -m
+	cp = commit -a -m 'Alteracoes diversas'
+	cam = commit -a --amend -m
+	sa = show --pretty="" --name-only
+	newb = checkout -b
+	delb = branch -d
+	ckm = checkout master
+	ck = checkout
+	nomerged = branch --no-merged
+	merged = branch --merged
+	syncmaster = "!f() { git ckm && git pull && git ck $1 && git rebase master; }; f"
+	syncod = "!f() { echo '' && echo 'Atualizando Branch '$1' com o servidor' && git ck $1 && git pull && echo '' && echo 'Rebase do Branch '$2'' && git ck $2 && git rebase $1; }; f"
+	syncMasterDesenv = "! git syncod master desenv"
+	mergepush = "!f() { echo '' && echo 'Merge do Branch '$1' no '$2' e subindo para o servidor.' && git ck $2 && git merge $1 && git push && git ck $1; }; f"
+	atuMasterDesenv = "! git syncod master desenv && git mergepush desenv master "
+	atuMasterDest = "! git syncod master $1 && git mergepush $1 master "
+	syncMasterDest= "! git syncod master $1 "
+	compress=gc
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code -n --wait --diff $LOCAL $REMOTE
+[user]
+	name = TGM - Thiago Mota
+	email = thiago.mota@totvs.com.br
+[core]
+	autocrlf = true
+	editor = code -n --disable-extensions --wait
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
