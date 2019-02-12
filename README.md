@@ -25,6 +25,8 @@ Dicas e comandos para o VsCode
 
 ### Remover duplicatas:
 
+[Dica do Marc.2377](https://stackoverflow.com/questions/37992493/how-to-remove-duplicate-lines-in-visual-studio-code/45829605)
+
 * Localizar com o RegEx: `^(.*)(\r?\n\1)+$`
 * Substituir por `$1`
 
