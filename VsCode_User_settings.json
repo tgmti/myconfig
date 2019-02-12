@@ -1,0 +1,46 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "git.enableSmartCommit": true,
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.defaultDateFormat": "DD/MM/YYYY HH:mm",
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    "breadcrumbs.enabled": true,
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "advpl.debug_ignoreSourceNotFound": true,
+    "advpl.environments": [
+        {
+            "environment": "environment",
+            "name": "Local",
+            "server": "localhost",
+            "port": "1234",
+            "serverVersion": "131227A",
+            "passwordCipher": "",
+            "includeList": "c:\\Users\\fabrica-008\\Documents\\Fontes\\P12_INCLUDES\\",
+            "user": "Admin",
+            "smartClientPath": "c:\\TOTVS\\Microsiga\\Protheus\\bin\\smartclient"
+        }
+    ],
+    "advpl.selectedEnvironment": "Local",
+    "advpl.alpha_compile": false,
+    "files.encoding": "windows1252",
+    "diffEditor.renderSideBySide": true,
+    "git.confirmSync": false,
+    "files.trimTrailingWhitespace": true,
+    "emmet.extensionsPath": "C:\\Users\\fabrica-008\\AppData\\Roaming\\Code\\User\\snippets\\emmet\\",
+    "emmet.includeLanguages": {
+        "vue":"html",
+        "vue-html":"html",
+        "javascript":"javascriptreact",
+        "advpl":"html",
+        "advpl":"advpl"
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-ExecutionPolicy", "Bypass",
+        "-NoLogo", "-NoProfile", "-NoExit",
+        "-Command", ". 'C:\\Users\\fabrica-008\\AppData\\Roaming\\cmder\\vendor\\conemu-maximus5\\\\..\\\\profile.ps1'"
+    ],
+    "git.autofetch": true
+}
