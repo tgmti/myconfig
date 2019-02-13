@@ -4,6 +4,9 @@
 ## Git
 Dicas e comandos de Git
 
+### Merge sem commit desnecessário:
+
+    git merge branch --no-commit
 
 --------------------------
 ## PowerShell
