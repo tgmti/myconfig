@@ -21,6 +21,11 @@ Dicas e comandos do PowerShell
 
     git log --since='1am' | Set-Clipboard
 
+--------------------------
+## Robocopy
+/E para copiarsubdiretórios:
+
+    Robocopy.exe origem destino  /W:1 /R:1 /E
 
 --------------------------
 ## VsCode
