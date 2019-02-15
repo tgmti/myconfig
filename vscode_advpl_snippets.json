@@ -52,7 +52,7 @@
 			"body": [
 			"While ${lCond}",
 			"	\ $TM_SELECTED_TEXT",
-			"$0",
+			"	\ $0",
 			"EndDo"
 			],
 			"description": "While Statement complete"
@@ -62,9 +62,9 @@
 			"prefix": "While",
 			"body": [
 			"While ${Alias}->(!Eof()) .And. ${lCond}",
-			"$TM_SELECTED_TEXT",
-			"$0",
-			"${Alias}->(DbSkip())",
+			"	\ $TM_SELECTED_TEXT",
+			"	\ $0",
+			"	\ ${Alias}->(DbSkip())",
 			"EndDo"
 			],
 			"description": "While Statement in Alias"
@@ -218,7 +218,7 @@
 				"",
 				"",
 				"//============================================================================\\",
-				"/*/{Protheus.doc}${1:$TM_FILENAME_BASE }",
+				"/*/{Protheus.doc}${1:$TM_FILENAME_BASE}",
 				"  ==============================================================================",
 				"	\ @description",
 				"	\ ${2:Descrição da função}",
