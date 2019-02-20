@@ -395,6 +395,53 @@
 			],
 			"description": "Monta uma Query para buscar dados de uma tabela TOP Connect"
 		},
+		"BeginSQL": {
+			"prefix": "BeginSQL",
+			"body": [
+				"Local ${2:cAlias} := ${1:GetNextAlias()}",
+				"",
+				"If Select($2) <> 0",
+				"	\ ($2)->(DbCloseArea())",
+				"EndIf",
+				"",
+				"BeginSQL Alias $2",
+				"",
+				"	\ %noparser%",
+				"",
+				"	\ SELECT ${3:Campos}",
+				"	\ FROM %Exp:RetSqlTab('${5:Tabelas}')%",
+				"	\ WHERE %Exp:RetSqlCond('$5')%",
+				"",
+				"EndSql",
+				"",
+				"While ($2)->(!Eof())",
+				"",
+				"	\ $0",
+				"",
+				"	\ ($2)->(DbSkip())",
+				"EndDo",
+				"",
+				"If Select($2) <> 0",
+				"	\ ($2)->(DbCloseArea())",
+				"EndIf",
+				""
+			],
+			"description": "Monta uma Query usando Embedded SQL"
+		},
+		"BeginSQL_Table": {
+			"prefix": "BeginSQL_Table",
+			"body": [
+				"%table:${1:cAlias}% $1"
+			],
+			"description": "Tabela no Embedded SQL"
+		},
+		"BeginSQL_Column": {
+			"prefix": "BeginSQL_Column",
+			"body": [
+				"COLUMN ${1:cCampo} AS ${2|Number,Numeric(),Date,Logic|} "
+			],
+			"description": "Tabela no Embedded SQL"
+		},
 
 		"Begin_Sequence": {
 			"prefix": "Begin Sequence",
