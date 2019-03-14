@@ -8,6 +8,14 @@ Dicas e comandos de Git
 
     git merge branch --no-commit
 
+### Submodules
+
+[working-with-submodules](https://github.blog/2016-02-01-working-with-submodules/)
+
+    # Update submodule
+    git submodule update --init --recursive
+
+
 --------------------------
 ## PowerShell
 Dicas e comandos do PowerShell
@@ -23,7 +31,7 @@ Dicas e comandos do PowerShell
 
 --------------------------
 ## Robocopy
-/E para copiarsubdiret�rios:
+/E para copiarsubdiretórios:
 
     Robocopy.exe origem destino  /W:1 /R:1 /E
 
@@ -42,5 +50,21 @@ Dicas e comandos para o VsCode
 ## Markdown
 
 Links: `[palavra](meulink)`
+
+--------------------------
+
+## SQL
+
+### Testar conexão com o banco via jdbc
+
+[Squirrel-sql](http://squirrel-sql.sourceforge.net/)
+
+--------------------------
+
+## Gif
+
+### LICEcap - Gravar Gif
+
+### [] - Gif to Video converter
 
 --------------------------
